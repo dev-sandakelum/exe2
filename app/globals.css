@@ -81,6 +81,23 @@
   --sidebar-accent-foreground: hsl(240 5.9% 10%);
   --sidebar-border: hsl(220 13% 91%);
   --sidebar-ring: hsl(217.2 91.2% 59.8%);
+
+  /* Green - Success */
+  --status-green-bg: #dafbe1; /* light green background */
+  --status-green: #28a745;    /* dark green text & border */
+
+  /* Amber - Warning */
+  --status-amber-bg: #fff4e5; /* light amber background */
+  --status-amber: #ffb600;    /* amber text & border */
+
+  /* Cyan - Info */
+  --status-cyan-bg: #e0f7fa;   /* light cyan background */
+  --status-cyan: #00bcd4;
+
+  --my-style-sec: #161a21;
+  --my-style-primary:#0e1014;
+  --my-style-third:#697282;
+  
 }
 
 .dark {

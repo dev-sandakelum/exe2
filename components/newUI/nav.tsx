@@ -21,14 +21,14 @@ export default function Nav() {
   // const path = paths[2] + paths[3] || "home";
   let path = "NexEra";
   let last_path = "";
-  if (paths.length > 2) {
-    for (let i = 2; i < paths.length - 1; i++) {
+  if (paths.length > 1) {
+    for (let i = 1; i < paths.length - 1; i++) {
       path = path + " / " + paths[i];
     }
     path = path + " / ";
     last_path = paths[paths.length - 1];
   }
-  if (paths.length == 2) {
+  if (paths[paths.length - 1] == "") {
     path = "";
     last_path = "NexEra";
   }
@@ -42,7 +42,7 @@ export default function Nav() {
       >
         OP {OP}
       </div>
-      {path == "home" ? (
+      {path == "NexEra" ? (
         <Image
           alt=""
           src={"/test/dashboard.png"}
@@ -53,7 +53,7 @@ export default function Nav() {
                     
         `}
         />
-      ) : path == "notes" ? (
+      ) : last_path == "notes" ? (
         <Image
           alt=""
           src={"/test/Files.png"}
@@ -74,7 +74,7 @@ export default function Nav() {
           <div className="w-16 h-16 border-b flex items-center justify-center">
             <div
               className="w-10 h-10 border rounded-full cursor-pointer "
-              onClick={() => router.push("/test")}
+              onClick={() => router.push("/")}
             >
               <Home className="m-2 text-(--my-style-third)" strokeWidth={1} />
             </div>
@@ -82,7 +82,7 @@ export default function Nav() {
           <div className="w-16 h-16 border-b flex items-center justify-center">
             <div
               className="w-10 h-10 border rounded-lg cursor-pointer "
-              onClick={() => router.push("/test/notes")}
+              onClick={() => router.push("/notes")}
             >
               <BookAlert
                 className="m-2 text-(--my-style-third) "
@@ -137,11 +137,11 @@ export default function Nav() {
         <div className="h-12 min-w-60 w-[300px] border rounded-br-full bg-(--my-style-primary) flex items-center gap-2 pl-6 text-(--my-style-third)">
           <p>
             {" "}
-            {path == "home" ? (
+            {path == "c" ? (
               <span className="text-white">NexEra</span>
             ) : (
               <span>
-                {path}<span className="text-white">{last_path}</span>
+                {path}<span className="text-white">{last_path} </span>
               </span>
             )}
           </p>

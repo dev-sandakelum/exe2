@@ -15,7 +15,7 @@ export default function NoteCard({
   Badge?: String;
 }) {
   return (
-    <Link href={"/test/notes/" + encodeURIComponent(Note_title)} className="relative bg-(--my-style-sec) flex items-center h-18 w-full rounded-lg cursor-pointer border border-transparent hover:border-(--my-style-third) hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ease-out overflow-hidden group">
+    <Link href={"/notes/" + encodeURIComponent(Note_title)} className="relative bg-(--my-style-sec) flex items-center h-18 w-full rounded-lg cursor-pointer border border-transparent hover:border-(--my-style-third) hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ease-out overflow-hidden group">
       {/* Icon Section */}
       <div className="min-w-20 h-full p-3 flex items-center justify-center">
         <div className="w-14 h-14 rounded-lg bg-(--my-style-primary) flex items-center justify-center shadow-sm group-hover:shadow-md group-hover:scale-110 transition-all duration-300 ease-out">

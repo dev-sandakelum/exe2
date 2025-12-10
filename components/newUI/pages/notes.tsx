@@ -1,48 +1,28 @@
-'use client';
+"use client";
 import { useState } from "react";
 import { LoadSubjects } from "../notes/loadSubjects";
 import NoteCard from "../notes/note-card";
 import { Subject } from "../all/types";
-import { LoadTopics } from "../notes/load_topics.";
+import { LoadTopics } from "../notes/load_topics";
 
-export default function Notes_page({subjectData}: {subjectData: Subject[]}) {
-  const [sidebarWidth, setSidebarWidth] = useState(false); // Example width for sidebar
-  const [selectedSubject, setSelectedSubject] = useState<Subject | null>(null);
+export default function Notes_page({
+  subject_code,
+}: {
+  subject_code: string | null;
+}) {
 
   return (
-    <div className="w-full h-full overflow-hidden">
-      <div
-        className=" absolute w-10 h-10 border text-gray-900 border-gray-300 cursor-pointer right-2 bottom-24 bg-white/80 backdrop-blur-sm rounded-lg shadow-sm hover:shadow-md hover:bg-white transition-all flex items-center justify-center text-xs font-medium z-1000"
-        onClick={
-          sidebarWidth == true
-            ? () => setSidebarWidth(false)
-            : () => setSidebarWidth(true)
-        }
-      >
-        sb
-      </div>
-      {/* ==================================================================== */}
-      <div className="fixed w-full h-full  pl-16 pb-0.5">
-        <div className="w-full h-full border flex border-amber-300/20 ">
-          {/* Content Area */}
-          <div
-            className={`h-full w-[300px] pt-12 border ${
-              sidebarWidth ? "-ml-[300px]" : "ml-0"
-            }
-                      transition-all duration-300 ease-in-out overflow-hidden`}
-          >
-            <div className=" w-full h-14 border">Sidebar Header</div>
-            <div className="h-full w-full border">
-              <LoadSubjects subjectData={subjectData} selectedSubject={selectedSubject} setSelectedSubject={setSelectedSubject} />
-            </div>
-          </div>
+    <>
+          {/* Main Content Area */}
           <div className="h-full w-full border max-w-[900px] m-auto">
-            <div className={`
+            <div
+              className={`
                 w-full h-full border overflow-y-scroll pt-12
                 [&::-webkit-scrollbar]:hidden
                 [--ms-overflow-style:'none']
                 smooth-scroll
-              `} >
+              `}
+            >
               {/* {code block} */}
               <div className=" border w-full h-auto p-4">
                 <p className=" text-3xl">Notes</p>
@@ -67,14 +47,15 @@ export default function Notes_page({subjectData}: {subjectData: Subject[]}) {
                   />
                 </div>
               </div>
-              {selectedSubject && (<>
-                <LoadTopics subject={selectedSubject.subject_code + "_info"} />
-                 {selectedSubject.subject_code + "_info"}</>
+              {subject_code && (
+                <>
+                  <LoadTopics subject={subject_code} />
+                  {subject_code}
+                </>
               )}
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+          {/* End Main Content Area */}
+        </>
   );
 }

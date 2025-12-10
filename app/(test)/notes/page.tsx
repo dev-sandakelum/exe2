@@ -1,15 +1,7 @@
-'use server';
-import Notes_page from "@/components/newUI/pages/notes";
-import { createClient } from "@/lib/supabase/server";
+import React from 'react'
 
-export default async function page() {
-   const supabase = await createClient();
-  const { data: subjectData } = await supabase.from("Notes_subject").select("*");
-  if (!subjectData) {
-    return <div>No subjects found.</div>;
-  }
-
+export default function page() {
   return (
-    <Notes_page subjectData={subjectData} />
-  );
+    <div>page</div>
+  )
 }

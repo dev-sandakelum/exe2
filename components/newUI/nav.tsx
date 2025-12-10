@@ -141,7 +141,11 @@ export default function Nav({ user }: { user: any }) {
       {/* ==================================================================== */}
 
       <div className="fixed h-12 w-full border pl-16 flex justify-between z-100">
-        <div className="h-12 min-w-60 w-[300px] border rounded-br-full bg-(--my-style-primary) flex items-center gap-2 pl-6 text-(--my-style-third)">
+        <div className={`
+          h-12 min-w-[300px] w-auto border rounded-br-full bg-(--my-style-primary) 
+          flex items-center gap-2 pl-6 pr-6 text-(--my-style-third)
+          transition-all duration-300 ease-in-out
+          `}>
           <p>
             <span>
               {path}

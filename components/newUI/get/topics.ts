@@ -8,11 +8,11 @@ export function GetTopics({ subject }: { subject: string }) {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const { data: topicData } = await supabase.from(subject).select("*");
+      const { data: topicData } = await supabase.from(subject  + "_info").select("*");
         setTopicData(topicData || []);
     };
     fetchPosts();
-  }, []);
+  }, [subject]);
 
   return topicData;
 }

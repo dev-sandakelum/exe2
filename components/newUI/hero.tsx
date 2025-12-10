@@ -1,7 +1,6 @@
 import { Search } from "lucide-react";
-import React from "react";
 
-export default function Hero() {
+export default function Hero({ user }: { user: any }) {
   return (
     <div className="flex w-full items-center flex-col gap-4 mt-18">
       <div className="gap-4 flex flex-col items-center">
@@ -11,6 +10,7 @@ export default function Hero() {
         <p className="text-md text-(--my-style-third)">
           Explore top courses and manage your personal knowledge base.
         </p>
+        <p>{user ? `Welcome back, ${user.email}` : "Join us today!"}</p>
       </div>
       <div className="flex items-center border rounded-full w-[500px] h-12 mt-4 px-1 gap-1 overflow-hidden">
         <div className="flex items-center h-10 px-2 w-full border rounded-full">

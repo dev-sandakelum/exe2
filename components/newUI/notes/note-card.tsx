@@ -58,7 +58,7 @@ export default function NoteCard({
       {/* Badge - Bottom Right */}
       {Badge && (
         <div className="absolute bottom-2 right-2 group-hover:scale-110 transition-transform duration-300">
-          <Badge1 />
+          <Badge1 type="" />
         </div>
       )}
     </Link>

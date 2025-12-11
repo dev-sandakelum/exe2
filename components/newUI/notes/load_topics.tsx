@@ -18,7 +18,7 @@ export function LoadTopics({ subject }: { subject: string }) {
         return (
           <div className=" border w-full h-auto p-4" key={topic.id}>
             <p className=" text-3xl">{topic.title}</p>
-            <p className="text-(--my-style-third) text-sm italic">
+            <p className="text-muted-foreground text-sm italic">
               {topic.description}
             </p>
             <div className=" w-full h-auto py-2 pr-4 grid grid-cols-2 gap-2">
@@ -36,9 +36,9 @@ export function LoadTopics({ subject }: { subject: string }) {
               ))}
               <div
                 onClick={() => redirect("/admin/notes")}
-                className={`border-2 border-(--my-style-sec) border-dashed rounded-lg flex items-center justify-center p-4 cursor-pointer hover:bg-(--my-style-sec)`}
+                className={`border-2 border-muted border-dashed rounded-lg flex items-center justify-center p-4 cursor-pointer hover:bg-muted`}
               >
-                <p className=" text-(--my-style-sec) text-4xl">+</p>
+                <p className=" text-muted-foreground text-4xl">+</p>
               </div>
             </div>
           </div>

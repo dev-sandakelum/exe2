@@ -8,7 +8,7 @@ import { Badge1 } from "../all/badges";
 export default function UserCard({ user }: { user: any }) {
   return (
     <>
-      <div className="border bg-(--my-style-sec) w-72 h-60 rounded-md absolute right-12 top-12 z-110">
+      <div className="border bg-card w-72 h-60 rounded-md absolute right-12 top-12 z-110">
         <div className="w-full h-full flex flex-col items-center justify-center">
           <div className=" w-20 h-20 rounded-full border overflow-hidden flex items-center justify-center">
             {user.id ? (
@@ -24,7 +24,7 @@ export default function UserCard({ user }: { user: any }) {
                 className="rounded-full"
               />
             ) : (
-              <User className="m-2 text-(--my-style-third)" strokeWidth={1} />
+              <User className="m-2 text-muted-foreground" strokeWidth={1} />
             )}
           </div>
 
@@ -32,7 +32,7 @@ export default function UserCard({ user }: { user: any }) {
             <p className="text-white">
               {user?.name ? user.name : user.id ? "No Name" : "Guest"}
             </p>
-            <p className="text-md text-(--my-style-third) mb-2">
+            <p className="text-md text-muted-foreground mb-2">
               {user?.email}
             </p>
             {user.id && (

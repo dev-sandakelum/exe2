@@ -25,5 +25,5 @@ export async function GET(request: Request) {
   }
 
   // Return the user to an error page with instructions
-  return NextResponse.redirect(`${origin}/auth/signin?error=auth_callback_error`)
+  return NextResponse.redirect(`${origin}/signin?error=auth_callback_error`)
 }

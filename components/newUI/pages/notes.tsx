@@ -26,7 +26,7 @@ export default function Notes_page({
               {/* {code block} */}
               <div className=" border w-full h-auto p-4">
                 <p className=" text-3xl">Notes</p>
-                <p className="text-(--my-style-third) text-sm italic">
+                <p className="text-muted-foreground text-sm italic">
                   organized by category
                 </p>
                 <div className=" w-full h-auto py-2 pr-4 grid grid-cols-2 gap-2">

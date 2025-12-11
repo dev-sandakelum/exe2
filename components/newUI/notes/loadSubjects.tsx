@@ -18,7 +18,7 @@ export function LoadSubjects({
         <li
           key={subject.id}
           onClick={() => {redirect(`/notes/${subject.subject_code}`)}}
-          className=" p-4 border-b hover:bg-(--my-style-sec) cursor-pointer"
+          className=" p-4 border-b hover:bg-muted cursor-pointer"
         >
           {subject.name}
         </li>

@@ -23,10 +23,10 @@ export default function NoteCard({
 }) {
   const user = GetUser({ id: author });
   return (
-    <Link href={"/notes/" + (subject_code ? subject_code + "/" : "") + (path ? path : Note_title)} className="relative bg-(--my-style-sec) flex items-center h-18 w-full rounded-lg cursor-pointer border border-transparent hover:border-(--my-style-third) hover:shadow-lg transition-all duration-300 ease-out overflow-hidden group">
+    <Link href={"/notes/" + (subject_code ? subject_code + "/" : "") + (path ? path : Note_title)} className="relative bg-card flex items-center h-18 w-full rounded-lg cursor-pointer border border-transparent hover:border-muted-foreground hover:shadow-lg transition-all duration-300 ease-out overflow-hidden group">
       {/* Icon Section */}
       <div className="min-w-20 h-full p-3 flex items-center justify-center">
-        <div className="w-14 h-14 rounded-lg bg-(--my-style-primary) flex items-center justify-center shadow-sm group-hover:shadow-md transition-all duration-300 ease-out">
+        <div className="w-14 h-14 rounded-lg bg-primary flex items-center justify-center shadow-sm group-hover:shadow-md transition-all duration-300 ease-out">
           {File_type === "pdf" ? (
             <FileText
               className="w-7 h-7 text-red-600  transition-transform duration-300"
@@ -51,14 +51,14 @@ export default function NoteCard({
         <p className="text-base font-medium truncate mb-1 transition-colors duration-300">
           {Note_title}
         </p>
-        <p className="text-(--my-style-third) text-sm truncate">
+        <p className="text-muted-foreground text-sm truncate">
           {Note_description}
         </p>
       </div>
 
       {/* Publisher Badge - Top Right */}
       <div className="absolute top-0 right-0 transition-transform duration-300">
-        <div className="px-3 py-1 bg-(--my-style-primary) text-(--my-style-third) text-xs font-medium rounded-[0_0_0_80px] shadow-sm">
+        <div className="px-3 py-1 bg-primary text-primary-foreground text-xs font-medium rounded-[0_0_0_80px] shadow-sm">
           {user.length > 0 ? user[0].username : "unknown"}
         </div>
       </div>

@@ -84,7 +84,7 @@ export default function Nav({ user }: { user: any }) {
               className="w-10 h-10 border rounded-full cursor-pointer "
               onClick={() => router.push("/")}
             >
-              <Home className="m-2 text-(--my-style-third)" strokeWidth={1} />
+              <Home className="m-2 text-muted-foreground" strokeWidth={1} />
             </div>
           </div>
           <div className="w-16 h-16 border-b flex items-center justify-center">
@@ -93,7 +93,7 @@ export default function Nav({ user }: { user: any }) {
               onClick={() => router.push("/notes")}
             >
               <BookAlert
-                className="m-2 text-(--my-style-third) "
+                className="m-2 text-muted-foreground "
                 strokeWidth={1}
               />
             </div>
@@ -101,7 +101,7 @@ export default function Nav({ user }: { user: any }) {
           <div className="w-16 h-16 border-b flex items-center justify-center">
             <div className="w-10 h-10 border rounded-lg">
               <ClipboardList
-                className="m-2 text-(--my-style-third)"
+                className="m-2 text-muted-foreground"
                 strokeWidth={1}
               />
             </div>
@@ -109,7 +109,7 @@ export default function Nav({ user }: { user: any }) {
           <div className="w-16 h-16 border-b flex items-center justify-center">
             <div className="w-10 h-10 border rounded-lg">
               <PlayCircle
-                className="m-2 text-(--my-style-third)"
+                className="m-2 text-muted-foreground"
                 strokeWidth={1}
               />
             </div>
@@ -117,7 +117,7 @@ export default function Nav({ user }: { user: any }) {
           <div className="w-16 h-16 border-b flex items-center justify-center">
             <div className="w-10 h-10 border rounded-lg">
               <GraduationCap
-                className="m-2 text-(--my-style-third)"
+                className="m-2 text-muted-foreground"
                 strokeWidth={1}
               />
             </div>
@@ -126,7 +126,7 @@ export default function Nav({ user }: { user: any }) {
         <div className="">
           <div className="w-16 h-16 border-b flex items-center justify-center">
             <div className="w-10 h-10 border rounded-full">
-              <Info className="m-2 text-(--my-style-third)" strokeWidth={1} />
+              <Info className="m-2 text-muted-foreground" strokeWidth={1} />
             </div>
           </div>
           <div className="w-16 h-16 border-b flex items-center justify-center">
@@ -140,8 +140,8 @@ export default function Nav({ user }: { user: any }) {
 
       <div className="fixed h-12 w-full border pl-16 flex justify-between z-100">
         <div className={`
-          h-12 min-w-[300px] w-auto border rounded-br-full bg-(--sidebar) 
-          flex items-center gap-2 pl-6 pr-6 text-(--sidebar-text)
+          h-12 min-w-[300px] w-auto border rounded-br-full bg-sidebar 
+          flex items-center gap-2 pl-6 pr-6 text-sidebar-foreground
           transition-all duration-300 ease-in-out
           `}>
           <p>
@@ -151,7 +151,7 @@ export default function Nav({ user }: { user: any }) {
             </span>
           </p>
         </div>
-        <div className="h-12 min-w-60 w-auto border rounded-bl-full bg-(--my-style-primary) pr-3 pl-3 flex items-center gap-2 justify-start flex-row-reverse">
+        <div className="h-12 min-w-60 w-auto border rounded-bl-full bg-primary pr-3 pl-3 flex items-center gap-2 justify-start flex-row-reverse">
           <div className=" h-10 w-10 border rounded-full overflow-hidden cursor-pointer flex items-center justify-center" onClick={()=>{setIsOpen(!isOpen)}}>
             {user.id ? (
               <Image
@@ -166,7 +166,7 @@ export default function Nav({ user }: { user: any }) {
                 className="rounded-full"
               />
             ) : (
-              <User className="m-2 text-(--my-style-third)" strokeWidth={1} />
+              <User className="m-2 text-muted-foreground" strokeWidth={1} />
             )}
           </div>
           <Badge1 type={user?.security_level} />

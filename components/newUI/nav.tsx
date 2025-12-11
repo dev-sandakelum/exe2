@@ -15,6 +15,7 @@ import { usePathname, useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { Badge1 } from "./all/badges";
 import UserCard from "./user/userCard";
+import { ModeToggle } from "../for_theme_provider/theme_toggler";
 
 export default function Nav({ user }: { user: any }) {
   const router = useRouter();
@@ -129,12 +130,9 @@ export default function Nav({ user }: { user: any }) {
             </div>
           </div>
           <div className="w-16 h-16 border-b flex items-center justify-center">
-            <div className="w-10 h-10 border rounded-lg">
-              <UserCircle
-                className="m-2 text-(--my-style-third)"
-                strokeWidth={1}
-              />
-            </div>
+           
+              <ModeToggle />
+            
           </div>
         </div>
       </div>
@@ -142,8 +140,8 @@ export default function Nav({ user }: { user: any }) {
 
       <div className="fixed h-12 w-full border pl-16 flex justify-between z-100">
         <div className={`
-          h-12 min-w-[300px] w-auto border rounded-br-full bg-(--my-style-primary) 
-          flex items-center gap-2 pl-6 pr-6 text-(--my-style-third)
+          h-12 min-w-[300px] w-auto border rounded-br-full bg-(--sidebar) 
+          flex items-center gap-2 pl-6 pr-6 text-(--sidebar-text)
           transition-all duration-300 ease-in-out
           `}>
           <p>
